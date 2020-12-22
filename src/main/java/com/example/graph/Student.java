@@ -29,6 +29,9 @@ public class Student {
         this.usn = usn;
     }
 
+    public Student() {
+    }
+
     Student(int id, String name, String usn) {
         this.id = id;
         this.name = name;

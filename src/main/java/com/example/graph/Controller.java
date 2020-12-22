@@ -3,6 +3,7 @@ package com.example.graph;
 import org.springframework.stereotype.Component;
 
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @Component
@@ -17,8 +18,8 @@ public class Controller {
     }
 
     @PostMapping("/post")
-    public String post() {
-        myPublisher.publish(new Student(1, "Akash", "1BI17CS010"));
-        return "The Value is " + this.myPublisher.getTest();
+    public String post(@RequestBody Student s) {
+        myPublisher.publish(s);
+        return "The Student is " + s.getName();
     }
 }
