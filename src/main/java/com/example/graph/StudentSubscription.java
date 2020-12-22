@@ -1,9 +1,9 @@
 package com.example.graph;
 
-import com.coxautodev.graphql.tools.GraphQLSubscriptionResolver;
-
 import org.reactivestreams.Publisher;
 import org.springframework.stereotype.Component;
+
+import graphql.kickstart.tools.GraphQLSubscriptionResolver;
 
 @Component
 public class StudentSubscription implements GraphQLSubscriptionResolver {

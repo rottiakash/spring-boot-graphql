@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.coxautodev.graphql.tools.GraphQLQueryResolver;
+import graphql.kickstart.tools.GraphQLQueryResolver;
 
 @Component
 public class StudentsQueryResolver implements GraphQLQueryResolver {
@@ -22,8 +22,7 @@ public class StudentsQueryResolver implements GraphQLQueryResolver {
         return this.Result;
     }
 
-    public String hello()
-    {
+    public String hello() {
         return "Hello";
     }
 }
