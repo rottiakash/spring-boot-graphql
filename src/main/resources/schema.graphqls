@@ -1,5 +1,11 @@
 type Query {
   students: [Student]
+  hello:String
+}
+
+type Subscription
+{
+  live: Student
 }
 
 type Student {
@@ -7,3 +13,4 @@ type Student {
   usn: String
   name: String
 }
+

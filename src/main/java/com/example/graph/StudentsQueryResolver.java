@@ -3,11 +3,11 @@ package com.example.graph;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-import graphql.kickstart.tools.GraphQLQueryResolver;
+import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 
-@Service
+@Component
 public class StudentsQueryResolver implements GraphQLQueryResolver {
     List<Student> Result;
 
@@ -18,6 +18,12 @@ public class StudentsQueryResolver implements GraphQLQueryResolver {
     }
 
     public List<Student> students() {
+        System.out.println("Query got");
         return this.Result;
+    }
+
+    public String hello()
+    {
+        return "Hello";
     }
 }
